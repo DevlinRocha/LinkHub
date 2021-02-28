@@ -3,6 +3,7 @@ html {
     width: 100%;
     height: 100%;
     font-size: 16px;
+    font-family: 'Poppins', sans-serif;
 /*
     background-color: black;
 */
@@ -49,6 +50,7 @@ main {
     height: 50%;
     background-image: url(Assets/pexels-felix-mittermeier-956999.jpg);
     background-size: cover;
+    object-fit: cover;
 }
 
 #profile-picture-container {
@@ -166,15 +168,15 @@ footer {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 2.5vh;
+    height: 5vh;
     position: fixed;
     left: 0;
     bottom: 0;
-    background-color: whitesmoke;
+    background-color: white;
 }
 
 #logo-container {
-    background-color: white;
+    font-size: 1.5rem;
 }
 
 footer > 
