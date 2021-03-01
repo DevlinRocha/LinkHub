@@ -39,6 +39,7 @@ main {
     align-items: center;
     margin: 0;
     padding: 0;
+    overflow: scroll;
 /*
     background-image: url(Assets/pexels-felix-mittermeier-956999.jpg);
     background-size: cover;
