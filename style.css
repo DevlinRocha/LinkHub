@@ -47,7 +47,7 @@ main {
 
 #user-info {
     width: 100%;
-    height: 50%;
+    height: 40%;
     background-image: url(Assets/pexels-felix-mittermeier-956999.jpg);
     background-size: cover;
     object-fit: cover;
@@ -85,7 +85,7 @@ main {
 
 #links {
     width: 100%;
-    height: auto;
+    height: 60%;
     margin: 0;
     padding: 5% 0;
     background-color: rgb(42, 42, 42);
@@ -169,7 +169,7 @@ footer {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 5vh;
+    height: 5%;
     background-color: white;
     font-size: 1.5rem;
 }
