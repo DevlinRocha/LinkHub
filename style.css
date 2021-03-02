@@ -51,10 +51,12 @@ main {
     background-image: url(Assets/pexels-felix-mittermeier-956999.jpg);
     background-size: cover;
     object-fit: cover;
+    flex: 0 0 auto;
 }
 
 #profile-picture-container {
     display: flex;
+    flex: 0 0 auto;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -88,7 +90,7 @@ main {
 
 #links {
     width: 100%;
-    flex: 1 1 auto; /* MIGHT NEED TO SWITCH TO HEIGHT: AUTO OR ANOTHER SOLUTION ONCE MORE LINKBOXES ARE ADDED */
+    height: auto;
     margin: 0;
     padding: 5vh 0 2vh;
     background-color: rgb(42, 42, 42);
@@ -98,6 +100,7 @@ main {
     list-style: none;
     text-decoration: none;
     display: flex;
+    flex: 1 1 auto;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
@@ -135,9 +138,9 @@ main {
     display: flex !important;
     justify-content: center;
     align-items: center;
-    width: 25%;
+    width: 10%;
     height: 100%;
-    font-size: 3.5rem;
+    font-size: 3rem;
 }
 
 .link-text {
@@ -147,7 +150,7 @@ main {
     align-items: center;
     width: 75%;
     height: 100%;
-    font-size: 1.75rem;
+    font-size: 1.5rem;
 }
 
 #instagram {
@@ -174,6 +177,7 @@ main {
 
 footer {
     display: flex;
+    flex: 1 1 auto;
     justify-content: center;
     align-items: center;
     width: 100%;
