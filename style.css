@@ -135,6 +135,7 @@ main {
     justify-content: center;
     align-items: center;
     width: 10%;
+    min-width: 42px;
     height: 100%;
     font-size: 3rem;
 }
