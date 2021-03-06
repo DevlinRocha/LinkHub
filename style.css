@@ -34,6 +34,7 @@ main {
     margin: 0;
     padding: 0;
     min-width: 300px;
+    background: linear-gradient(180deg, #424242 0%, #171717 100%);
 /*
     background-image: url(Assets/pexels-felix-mittermeier-956999.jpg);
     background-size: cover;
@@ -95,7 +96,6 @@ main {
     height: auto;
     margin: 0;
     padding: 5vh 0 0;
-    background-color: rgb(42, 42, 42);
     min-height: 300px;
 }
 
@@ -196,7 +196,6 @@ footer {
     width: 100%;
     height: auto;
     font-size: 1.5rem;
-    background-color: rgb(42, 42, 42);
     margin: 0;
     padding: 0 0 10px;
 }
