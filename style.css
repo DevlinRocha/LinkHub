@@ -125,6 +125,7 @@ main {
     background-color: white;
     min-height: 60px;
     min-width: 250px;
+    max-width: 500px;
 }
 
 .link-button {
