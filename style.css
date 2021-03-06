@@ -52,6 +52,7 @@ main {
     background-size: cover;
     object-fit: cover;
     min-height: 150px;
+    background-position: center center;
 }
 
 #profile-picture-container {
