@@ -25,13 +25,14 @@ body {
 }
 
 main {
-    width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: column;
     flex: 1 1 auto;
     justify-content: flex-start;
     align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
     margin: 0;
     padding: 0;
     min-width: 300px;
@@ -89,6 +90,7 @@ main {
     background-color: white;
     border-radius: 50px;
     margin: 2.5vh 0 0;
+    cursor: pointer;
 }
 
 /* LINKHUB */
@@ -203,6 +205,7 @@ footer {
     font-size: 1.5rem;
     margin: 0;
     padding: 0 0 10px;
+    z-index: 1;
 }
 
 #logo-container {
@@ -222,7 +225,44 @@ footer {
     padding: 0;
 }
 
+#linkhub-text.open {
+    color: black;
+}
+
 /* WHEN HEIGHT IS SMALL, WHITE SPACE APPEARS, BACKGROUND IS NOT COVERING IT ALL.
 BACKGROUND WAS MOVED AS A GRADIENT TO MAIN INSTEAD OF INDIVIDUAL DIVS
 TRY MOVING FOOTER INTO SAME PARENT AS LINKS AND CHANGE PARENT BACKGROUND
 */
+
+.hidden {
+    height: 0;
+}
+
+#user-bio {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    transition: all 0.75s;
+    bottom: 0;
+}
+
+#user-bio > * {
+    display: none;
+    font-size: 0;
+    opacity: 0;
+    transition: all 1s;
+}
+
+#user-bio.open {
+    height: 65%;
+}
+
+#user-bio.open-active > * {
+    display: block;
+    font-size: 1rem;
+    opacity: 1;
+}
