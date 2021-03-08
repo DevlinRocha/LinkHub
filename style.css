@@ -29,11 +29,13 @@ main {
     height: 100%;
     display: flex;
     flex-direction: column;
+    flex: 1 1 auto;
     justify-content: flex-start;
     align-items: center;
     margin: 0;
     padding: 0;
     min-width: 300px;
+    background-color: #424242;
     background: linear-gradient(180deg, #424242 0%, #171717 100%);
 /*
     background-image: url(Assets/pexels-felix-mittermeier-956999.jpg);
@@ -218,3 +220,8 @@ footer {
     margin: 0;
     padding: 0;
 }
+
+/* WHEN HEIGHT IS SMALL, WHITE SPACE APPEARS, BACKGROUND IS NOT COVERING IT ALL.
+BACKGROUND WAS MOVED AS A GRADIENT TO MAIN INSTEAD OF INDIVIDUAL DIVS
+TRY MOVING FOOTER INTO SAME PARENT AS LINKS AND CHANGE PARENT BACKGROUND
+*/
