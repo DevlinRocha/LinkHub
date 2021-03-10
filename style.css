@@ -36,8 +36,8 @@ main {
     margin: 0;
     padding: 0;
     min-width: 300px;
-    background-color: #424242;
     background: linear-gradient(180deg, #424242 0%, #171717 100%);
+    overflow: auto;
 /*
     background-image: url(Assets/pexels-felix-mittermeier-956999.jpg);
     background-size: cover;
@@ -209,18 +209,25 @@ footer {
 }
 
 #logo-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
     margin: 0;
     padding: 0;
 }
 
 #linkhub-logo {
     color: orange;
+    flex: 1 0 auto;
+    align-self: center;
     margin: 0;
     padding: 0;
 }
 
 #linkhub-text {
     color: white;
+    flex: 1 0 auto;
     margin: 0;
     padding: 0;
 }
@@ -238,31 +245,54 @@ TRY MOVING FOOTER INTO SAME PARENT AS LINKS AND CHANGE PARENT BACKGROUND
     height: 0;
 }
 
-#user-bio {
+#user-bio-container {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
     position: absolute;
-    background-color: white;
+    background: white;
     width: 100%;
     transition: all 0.75s;
     bottom: 0;
+    margin: 0;
 }
 
-#user-bio > * {
+#user-bio-container.open {
+    height: 65%;
+    padding: 0 0 50px;
+}
+
+#user-bio-container.open-active > * {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    opacity: 1;
+}
+
+#user-bio {
+    overflow: auto;
     display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
     font-size: 0;
     opacity: 0;
     transition: all 1s;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
-#user-bio.open {
-    height: 65%;
+#user-bio > * {
+    font-size: 1.25rem;
+    margin: 0;
+    padding: 0 5vw 2vh;
 }
 
-#user-bio.open-active > * {
-    display: block;
-    font-size: 1rem;
-    opacity: 1;
+#user-bio > h1 {
+    font-size: 2rem;
+    align-self: center;
+    margin: 0;
+    padding: 2vh 0 3vh;
 }
+
+/* PUT THE MAIN WITH ALL CHILDREN IN A NEW DIV AND USE THAT FOR BACKGROUND GRADIENT */

@@ -1,14 +1,18 @@
 const linkhubUsername = document.querySelector('#linkhub-username');
-const userBio = document.querySelector('#user-bio');
+const userBioContainer = document.querySelector('#user-bio-container');
 const linkhubText = document.querySelector('#linkhub-text');
+const footer = document.querySelector('footer');
+
+console.log(footer.getBoundingClientRect());
+console.log(userBioContainer.getBoundingClientRect());
 
 function bioDisplay() {
-    userBio.classList.toggle('open');
+    userBioContainer.classList.toggle('open');
     linkhubText.classList.toggle('open');
     setTimeout(() => {
-        userBio.classList.remove('open-active');
-        if(userBio.classList.contains('open')) {
-          userBio.classList.add('open-active')
+        userBioContainer.classList.remove('open-active');
+        if(userBioContainer.classList.contains('open')) {
+          userBioContainer.classList.add('open-active')
         }
       }, 300);
 }
