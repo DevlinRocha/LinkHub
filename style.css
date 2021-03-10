@@ -267,6 +267,7 @@ footer {
 }
 
 #user-bio {
+    flex: 1 0 auto;
     overflow: auto;
     display: none;
     flex-direction: column;
@@ -282,13 +283,13 @@ footer {
 }
 
 #user-bio > * {
-    font-size: 1.25rem;
+    font-size: 1rem;
     margin: 0;
     padding: 0 5vw 2vh;
 }
 
 #user-bio > h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     align-self: center;
     margin: 0;
     padding: 2vh 0 3vh;
