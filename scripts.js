@@ -16,13 +16,17 @@ const linkhubInfoContainer = document.querySelector('#linkhub-info-container');
 console.log(footer.getBoundingClientRect());
 console.log(userBioContainer.getBoundingClientRect());
 
+
+
 // FUNCTIONS:
 
-function closeDisplay(e) {
+function closeDisplay() {
   openDisplay = document.querySelector('.hidden.open');
+
   if (openDisplay) {
     openDisplay.classList.remove('open');
     openDisplay.classList.remove('open-active');
+    
     setTimeout(() => {
       linkhubText.classList.remove('open');
     }, 300);
@@ -30,8 +34,11 @@ function closeDisplay(e) {
 };
 
 function addBorder() {
-  console.log(this);
-  this.classList.add('select');
+  this.style.border = '5px solid lightskyblue';
+
+  setTimeout(() => {
+    this.style.border = '5px solid orangered';
+  }, 300);
 };
 
 function bioDisplay(e) {
@@ -43,11 +50,13 @@ function bioDisplay(e) {
 
   setTimeout(() => {
       userBioContainer.classList.remove('open-active');
+
       if (userBioContainer.classList.contains('open')) {
         userBioContainer.classList.add('open-active');
       } else {
         linkhubText.classList.remove('open');
       };
+      
     }, 300);
 };
 
@@ -59,11 +68,13 @@ function linkhubDisplay() {
 
   setTimeout(() => {
     linkhubInfoContainer.classList.remove('open-active');
+
     if (linkhubInfoContainer.classList.contains('open')) {
       linkhubInfoContainer.classList.add('open-active');
     } else {
       linkhubText.classList.remove('open');
     };
+
   }, 300);
 };
 
