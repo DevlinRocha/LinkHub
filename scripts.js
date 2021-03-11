@@ -1,5 +1,6 @@
 // VARIABLE DECLARATIONS:
 
+const userInfo = document.querySelector('#user-info');
 const linkhubUsername = document.querySelector('#linkhub-username');
 const linkboxes = document.querySelectorAll('.linkbox');
 const footer = document.querySelector('footer');
@@ -17,16 +18,24 @@ console.log(userBioContainer.getBoundingClientRect());
 
 // FUNCTIONS:
 
+function closeDisplay(e) {
+  openDisplay = document.querySelector('.hidden.open');
+  if (openDisplay) {
+    openDisplay.classList.remove('open');
+    openDisplay.classList.remove('open-active');
+    setTimeout(() => {
+      linkhubText.classList.remove('open');
+    }, 300);
+  };
+};
+
 function addBorder() {
   console.log(this);
   this.classList.add('select');
-
-  setTimeout(() => {
-    this.classList.remove('select');
-  }, 300);
 };
 
-function bioDisplay() {
+function bioDisplay(e) {
+  e.stopPropagation();
   userBioContainer.classList.toggle('open');
   linkhubText.classList.add('open');
   linkhubInfoContainer.classList.remove('open');
@@ -62,6 +71,7 @@ function linkhubDisplay() {
 
 // EVENT LISTENERS:
 
+userInfo.addEventListener('click', closeDisplay);
 linkhubUsername.addEventListener('click', bioDisplay);
 linkboxes.forEach(linkbox => linkbox.addEventListener('click', addBorder));
 logoContainer.addEventListener('click', linkhubDisplay);
