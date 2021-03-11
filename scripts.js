@@ -16,26 +16,30 @@ console.log(userBioContainer.getBoundingClientRect());
 
 function bioDisplay() {
   userBioContainer.classList.toggle('open');
-  linkhubText.classList.toggle('open');
+  linkhubText.classList.add('open');
   linkhubInfoContainer.classList.remove('open');
   linkhubInfoContainer.classList.remove('open-active');
   setTimeout(() => {
       userBioContainer.classList.remove('open-active');
       if (userBioContainer.classList.contains('open')) {
         userBioContainer.classList.add('open-active');
+      } else {
+        linkhubText.classList.remove('open');
       };
     }, 300);
 };
 
 function linkhubDisplay() {
   linkhubInfoContainer.classList.toggle('open');
-  linkhubText.classList.toggle('open');
+  linkhubText.classList.add('open');
   userBioContainer.classList.remove('open');
   userBioContainer.classList.remove('open-active');
   setTimeout(() => {
     linkhubInfoContainer.classList.remove('open-active');
     if (linkhubInfoContainer.classList.contains('open')) {
       linkhubInfoContainer.classList.add('open-active');
+    } else {
+      linkhubText.classList.remove('open');
     };
   }, 300);
 };
