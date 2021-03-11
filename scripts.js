@@ -17,6 +17,8 @@ console.log(userBioContainer.getBoundingClientRect());
 function bioDisplay() {
   userBioContainer.classList.toggle('open');
   linkhubText.classList.toggle('open');
+  linkhubInfoContainer.classList.remove('open');
+  linkhubInfoContainer.classList.remove('open-active');
   setTimeout(() => {
       userBioContainer.classList.remove('open-active');
       if (userBioContainer.classList.contains('open')) {
@@ -28,6 +30,8 @@ function bioDisplay() {
 function linkhubDisplay() {
   linkhubInfoContainer.classList.toggle('open');
   linkhubText.classList.toggle('open');
+  userBioContainer.classList.remove('open');
+  userBioContainer.classList.remove('open-active');
   setTimeout(() => {
     linkhubInfoContainer.classList.remove('open-active');
     if (linkhubInfoContainer.classList.contains('open')) {
