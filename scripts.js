@@ -1,11 +1,14 @@
 // VARIABLE DECLARATIONS:
 
 const linkhubUsername = document.querySelector('#linkhub-username');
-const linkhubText = document.querySelector('#linkhub-text');
+const linkboxes = document.querySelectorAll('.linkbox');
 const footer = document.querySelector('footer');
 const logoContainer = document.querySelector('#logo-container');
+const linkhubText = document.querySelector('#linkhub-text');
 const userBioContainer = document.querySelector('#user-bio-container');
 const linkhubInfoContainer = document.querySelector('#linkhub-info-container');
+
+
 
 // TESTING:
 
@@ -14,11 +17,21 @@ console.log(userBioContainer.getBoundingClientRect());
 
 // FUNCTIONS:
 
+function addBorder() {
+  console.log(this);
+  this.classList.add('select');
+
+  setTimeout(() => {
+    this.classList.remove('select');
+  }, 300);
+};
+
 function bioDisplay() {
   userBioContainer.classList.toggle('open');
   linkhubText.classList.add('open');
   linkhubInfoContainer.classList.remove('open');
   linkhubInfoContainer.classList.remove('open-active');
+
   setTimeout(() => {
       userBioContainer.classList.remove('open-active');
       if (userBioContainer.classList.contains('open')) {
@@ -34,6 +47,7 @@ function linkhubDisplay() {
   linkhubText.classList.add('open');
   userBioContainer.classList.remove('open');
   userBioContainer.classList.remove('open-active');
+
   setTimeout(() => {
     linkhubInfoContainer.classList.remove('open-active');
     if (linkhubInfoContainer.classList.contains('open')) {
@@ -44,7 +58,10 @@ function linkhubDisplay() {
   }, 300);
 };
 
+
+
 // EVENT LISTENERS:
 
 linkhubUsername.addEventListener('click', bioDisplay);
+linkboxes.forEach(linkbox => linkbox.addEventListener('click', addBorder));
 logoContainer.addEventListener('click', linkhubDisplay);

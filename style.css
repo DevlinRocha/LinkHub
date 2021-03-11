@@ -135,6 +135,14 @@ main {
     max-height: 100px;
 }
 
+.linkbox:hover {
+    border: 5px solid lightskyblue;
+}
+
+.select {
+    border: 5px solid lightskyblue;
+}
+
 .link-button {
     display: flex;
     flex: 0 0 auto;
@@ -257,7 +265,7 @@ footer {
 }
 
 #user-bio-container {
-
+    display: grid;
 }
 
 .hidden.open {
