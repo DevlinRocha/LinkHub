@@ -29,7 +29,7 @@ function closeDisplay() {
     
     setTimeout(() => {
       linkhubText.classList.remove('open');
-    }, 300);
+    }, 700);
   };
 };
 
