@@ -85,7 +85,7 @@ main {
 }
 
 #linkhub-username {
-    font-size: 1rem;
+    font-size: 1.25rem;
     padding: 5px 7px;
     background-color: white;
     border-radius: 50px;
@@ -217,6 +217,7 @@ footer {
     align-items: flex-start;
     margin: 0;
     padding: 0;
+    cursor: pointer;
 }
 
 #linkhub-logo {
@@ -241,10 +242,6 @@ footer {
 /* USER BIO */
 
 .hidden {
-    height: 0;
-}
-
-#user-bio-container {
     display: flex;
     position: absolute;
     background: white;
@@ -252,21 +249,26 @@ footer {
     transition: all 0.75s;
     bottom: 0;
     margin: 0;
+    height: 0;
 }
 
-#user-bio-container.open {
+#user-bio-container {
+
+}
+
+.hidden.open {
     height: 65%;
     padding: 0 0 50px;
 }
 
-#user-bio-container.open-active > * {
+.hidden.open-active > * {
     display: flex;
     margin: 0;
     padding: 0;
     opacity: 1;
 }
 
-#user-bio {
+.hidden-content {
     flex: 1 0 auto;
     overflow: auto;
     display: none;
@@ -282,16 +284,20 @@ footer {
     padding: 0;
 }
 
-#user-bio > * {
+.hidden-content > * {
     font-size: 1rem;
     margin: 0;
     padding: 0 5vw 2vh;
 }
 
-#user-bio > h1 {
+.hidden-content > h2 {
     font-size: 3rem;
     align-self: center;
     margin: 0;
     padding: 2vh 0 3vh;
     font-weight: 900;
+}
+
+#linkhub-info-container {
+    
 }
