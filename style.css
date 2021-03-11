@@ -239,7 +239,7 @@ footer {
     color: black;
 }
 
-/* USER BIO */
+/* OPENABLE SECTIONS */
 
 .hidden {
     display: flex;
@@ -296,6 +296,28 @@ footer {
     margin: 0;
     padding: 2vh 0 3vh;
     font-weight: 900;
+}
+
+#bio {
+    display: flex;
+    justify-content: space-around;
+}
+
+#bio-text {
+    display: flex;
+    flex-direction: column;
+    margin: 0 25px 0 0;
+    padding: 0;
+}
+
+#bio-text > * {
+    margin: 0;
+    padding: 10px 0;
+}
+
+#bio-picture {
+    width: 100%;
+    height: 100%;
 }
 
 #linkhub-info-container {
