@@ -1,6 +1,7 @@
 // VARIABLE DECLARATIONS:
 
 const userInfo = document.querySelector('#user-info');
+const profilePicture = document.querySelector('#profile-picture');
 const linkhubUsername = document.querySelector('#linkhub-username');
 const linkboxes = document.querySelectorAll('.linkbox');
 const footer = document.querySelector('footer');
@@ -33,6 +34,8 @@ function closeDisplay() {
   };
 };
 
+
+
 function addBorder() {
   this.style.border = '5px solid lightskyblue';
 
@@ -40,6 +43,8 @@ function addBorder() {
     this.style.border = '5px solid orangered';
   }, 300);
 };
+
+
 
 function bioDisplay(e) {
   e.stopPropagation();
@@ -56,9 +61,10 @@ function bioDisplay(e) {
       } else {
         linkhubText.classList.remove('open');
       };
-      
     }, 300);
 };
+
+
 
 function linkhubDisplay() {
   linkhubInfoContainer.classList.toggle('open');
@@ -74,7 +80,6 @@ function linkhubDisplay() {
     } else {
       linkhubText.classList.remove('open');
     };
-
   }, 300);
 };
 
@@ -83,6 +88,7 @@ function linkhubDisplay() {
 // EVENT LISTENERS:
 
 userInfo.addEventListener('click', closeDisplay);
+profilePicture.addEventListener('click', bioDisplay);
 linkhubUsername.addEventListener('click', bioDisplay);
 linkboxes.forEach(linkbox => linkbox.addEventListener('click', addBorder));
 logoContainer.addEventListener('click', linkhubDisplay);
