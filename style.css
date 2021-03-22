@@ -191,12 +191,12 @@ main {
     color: #333;
 }
 
-#twitch {
-    color: #9146FF;
-}
-
 #linkedin {
     color: #2867B2;
+}
+
+#twitch {
+    color: #9146FF;
 }
 
 .link-text {
