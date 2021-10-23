@@ -10,14 +10,10 @@ const linkhubText = document.querySelector('#linkhub-text');
 const userBioContainer = document.querySelector('#user-bio-container');
 const linkhubInfoContainer = document.querySelector('#linkhub-info-container');
 
-
-
 // TESTING:
 
 console.log(footer.getBoundingClientRect());
 console.log(userBioContainer.getBoundingClientRect());
-
-
 
 // FUNCTIONS:
 
@@ -34,8 +30,6 @@ function closeDisplay() {
   };
 };
 
-
-
 function addBorder() {
   this.style.border = '5px solid lightskyblue';
 
@@ -43,8 +37,6 @@ function addBorder() {
     this.style.border = '5px solid orangered';
   }, 300);
 };
-
-
 
 function bioDisplay(e) {
   e.stopPropagation();
@@ -64,8 +56,6 @@ function bioDisplay(e) {
     }, 300);
 };
 
-
-
 function linkhubDisplay() {
   linkhubInfoContainer.classList.toggle('open');
   linkhubText.classList.add('open');
@@ -82,8 +72,6 @@ function linkhubDisplay() {
     };
   }, 300);
 };
-
-
 
 // EVENT LISTENERS:
 
